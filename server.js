@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const axios = require("axios");
 
 const app = express();
@@ -6,6 +7,7 @@ const PORT = 8000;
 
 const API_URL = "https://www.google.com/doodles/json";
 
+app.use(cors());
 app.use(express.json());
 
 app.get("/get/doodle/:year/:month", async (req, res) => {
