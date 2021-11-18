@@ -23,4 +23,6 @@ app.get("/get/doodle/:year/:month", async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT, () => console.log(`Server up on port ${PORT}`));
+app.listen(process.env.PORT, () =>
+  console.log(`Server up on port ${process.env.PORT}`)
+);
